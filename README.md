@@ -1,1 +1,1 @@
-# C-team
+# C++ team
