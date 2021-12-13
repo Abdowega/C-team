@@ -42,6 +42,13 @@ public:
 
 	//destructor
 	~ApplicationManager();
+
+
+	void getCompList(Component* comp[]) {
+		for (int i = 0; i < MaxCompCount; i++) {
+			CompList[i] = comp[i];
+		}
+	}
 };
 
 #endif

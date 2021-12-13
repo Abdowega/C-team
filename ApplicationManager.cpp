@@ -1,6 +1,6 @@
 #include "ApplicationManager.h"
 #include "Actions\ActionAddRes.h"
-
+#include "Actions\Select.h"
 
 ApplicationManager::ApplicationManager()
 {
@@ -38,7 +38,10 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		case ADD_CONNECTION:
 			//TODO: Create AddConection Action here
 			break;
-	
+
+		case SELECT:
+			pAct = new ActionSelect(this);
+			break;
 
 		case EXIT:
 			///TODO: create ExitAction here
