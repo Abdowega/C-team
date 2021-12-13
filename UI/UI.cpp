@@ -19,7 +19,6 @@ UI::UI()
 
 	CreateDesignToolBar();	//Create the desgin toolbar
 	CreateStatusBar();		//Create Status bar
-
 }
 
 
@@ -224,6 +223,47 @@ void UI::DrawResistor(const GraphicsInfo &r_GfxInfo, bool selected) const
 	pWind->DrawImage(ResImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
 }
 
+void DrawBuzzer(const GraphicsInfo &r_GfxInfo, bool selected = false) const
+{
+string ResImage;
+	if(selected)	
+		ResImage ="Images\\Comp\\Buzzer_HI.jpg";	//use image of highlighted 
+	else  
+		ResImage = "Images\\Comp\\Buzzer.jpg";	//use image of the normal
+
+	//Draw Buzzer at Gfx_Info (1st corner)
+	pWind->DrawImage(ResImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+}
+void DrawFuze(const GraphicsInfo &r_GfxInfo, bool selected = false) const
+{
+     string ResImage;
+	if(selected)	
+		ResImage ="Images\\Comp\\Fuse_HI.jpg";	//use image of highlighted 
+	else  
+		ResImage = "Images\\Comp\\Fuse.jpg";	//use image of the normal r
+
+	//Draw Fuse at Gfx_Info (1st corner)
+	pWind->DrawImage(ResImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+
+}
+
+
+void DrawConnection(const GraphicsInfo &r_GfxInfo, bool selected = false) const
+{
+     string ResImage;
+	if(selected)	
+		ResImage ="Images\\Conn\\Conn_HI.jpg";	//use image of highlighted 
+	else  
+		ResImage = "Images\\Conn\\Conn.jpg";	//use image of the normal 
+
+	//Draw Connection at Gfx_Info (1st corner)
+	pWind->DrawImage(ResImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+
+}
+
+
+
+
 //TODO: Add similar functions to draw all other components
 
 
@@ -238,10 +278,4 @@ void UI::DrawConnection(const GraphicsInfo &r_GfxInfo, bool selected) const
 UI::~UI()
 {
 	delete pWind;
-}
-
-
-
-window* UI::getPWind() {
-	return pWind;
 }

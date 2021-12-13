@@ -3,6 +3,7 @@
 
 #include "..\CMUgraphicsLib\CMUgraphics.h"
 #include "..\Defs.h"
+#include "Battery.h"
 
 #include <string>
 using namespace std;
@@ -39,7 +40,7 @@ class UI
 		//Note: Items are ordered here as they appear in the menu
 		//If you want to change the menu items order, just change the order here
 		ITM_RES,		//Resistor item in menu
-		
+	
 		ITM_EXIT,		//Exit item
 		//TODO: Add more items names here
 	
@@ -110,17 +111,10 @@ public:
 		
 	// Draws a resistor
 	void DrawResistor(const GraphicsInfo &r_GfxInfo, bool selected = false) const;
+        void DrawBuzzer(const GraphicsInfo &r_GfxInfo, bool selected = false) const;
 
-	///TODO: Make similar functions for drawing all other components, connections, .. etc
-
-	// Draws Connection
-	void DrawConnection(const GraphicsInfo &r_GfxInfo, bool selected = false) const;
-	
-	void PrintMsg(string msg) const;	//Print a message on Status bar
 
 	~UI();
-
-	window* getPWind();
 };
 
 #endif
