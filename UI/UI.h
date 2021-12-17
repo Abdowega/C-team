@@ -109,7 +109,7 @@ public:
 
 		
 	// Draws a resistor
-	void DrawResistor(const GraphicsInfo &r_GfxInfo, bool selected = false) const;
+	void DrawResistor(const GraphicsInfo &r_GfxInfo, string lbl, bool selected = false) const;
 
 	///TODO: Make similar functions for drawing all other components, connections, .. etc
 
@@ -117,6 +117,8 @@ public:
 	void DrawConnection(const GraphicsInfo &r_GfxInfo, bool selected = false) const;
 	
 	void PrintMsg(string msg) const;	//Print a message on Status bar
+
+	void Printlabel(string msg, int x, int y) const; // Print a label
 
 	~UI();
 

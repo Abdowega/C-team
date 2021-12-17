@@ -19,9 +19,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Components\Component.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
     <ClCompile Include="Components\Connection.cpp">
       <Filter>Components</Filter>
     </ClCompile>
@@ -144,6 +141,8 @@
     <ClCompile Include="Actions\Select.cpp">
       <Filter>Actions</Filter>
     </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
+    <ClCompile Include="Components\Component.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Components\Component.h">
@@ -216,7 +215,6 @@
       <Filter>UI</Filter>
     </ClInclude>
     <ClInclude Include="ApplicationManager.h" />
-    <ClInclude Include="Defs.H" />
     <ClInclude Include="Components\Resistor.h">
       <Filter>Components</Filter>
     </ClInclude>
@@ -226,6 +224,8 @@
     <ClInclude Include="Actions\Select.h">
       <Filter>Actions</Filter>
     </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\auxil.h" />
+    <ClInclude Include="Defs.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMUgraphicsLib\Manual.txt">
@@ -234,5 +234,23 @@
     <Text Include="CMUgraphicsLib\Readme.txt">
       <Filter>CMUgrahpics Library</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Images\Comp\Resistor.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Resistor_HI.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Exit.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Resistor.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

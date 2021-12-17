@@ -152,6 +152,16 @@ void UI::PrintMsg(string msg) const
 	pWind->DrawString(MsgX, height - MsgY, msg);
 }
 //////////////////////////////////////////////////////////////////////////////////
+void UI::Printlabel(string msg,int xx, int yy) const
+{
+	
+	// Print the Message
+	pWind->SetFont(20, BOLD | ITALICIZED, BY_NAME, "Arial");
+	pWind->SetPen(BLACK);
+	pWind->DrawString(100, 100, msg);
+}
+
+
 void UI::ClearStatusBar()const
 {
 	// Set the Message offset from the Status Bar
@@ -212,7 +222,7 @@ void UI::CreateSimulationToolBar()
 //								Components Drawing Functions							//
 //======================================================================================//
 
-void UI::DrawResistor(const GraphicsInfo &r_GfxInfo, bool selected) const
+void UI::DrawResistor(const GraphicsInfo &r_GfxInfo, string labl, bool selected) const
 {
 	string ResImage;
 	if(selected)	
@@ -220,9 +230,20 @@ void UI::DrawResistor(const GraphicsInfo &r_GfxInfo, bool selected) const
 	else  
 		ResImage = "Images\\Comp\\Resistor.jpg";	//use image of the normal resistor
 
+	
+	
+	int y = r_GfxInfo.PointsList[0].y;
+	int x = r_GfxInfo.PointsList[0].x;
+
 	//Draw Resistor at Gfx_Info (1st corner)
 	pWind->DrawImage(ResImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+	
+	
+	Printlabel("resistance",100, 500);
+
+
 }
+
 
 //TODO: Add similar functions to draw all other components
 
