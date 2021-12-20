@@ -1,8 +1,7 @@
 #pragma once
 #include "Component.h"
-#include "UI/UI.h"
-class Ground :
-	public Component
+
+class Ground: public Component
 {
 public:
 	Ground(GraphicsInfo* r_GfxInfo); ////for Battery to Draw itself

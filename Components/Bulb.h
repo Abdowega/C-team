@@ -1,8 +1,8 @@
 #pragma once
 #include "Component.h"
-#include "UI/UI.h"
-class Bulb :
-    public Component
+
+
+class Bulb: public Component
 {
 public:
 	Bulb(GraphicsInfo* r_GfxInfo); ////for Battery to Draw itself

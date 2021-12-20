@@ -1,4 +1,5 @@
 #include "Ground.h"
+
 Ground::Ground(GraphicsInfo* r_GfxInfo) :Component(r_GfxInfo)
 {
 }

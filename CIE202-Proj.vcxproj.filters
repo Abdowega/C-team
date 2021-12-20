@@ -143,6 +143,18 @@
     </ClCompile>
     <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
     <ClCompile Include="Components\Component.cpp" />
+    <ClCompile Include="Components\Battery.cpp" />
+    <ClCompile Include="Components\Bulb.cpp" />
+    <ClCompile Include="Components\Buzzer.cpp" />
+    <ClCompile Include="Components\Fuse.cpp" />
+    <ClCompile Include="Components\Ground.cpp" />
+    <ClCompile Include="Components\Switch.cpp" />
+    <ClCompile Include="Actions\ActionAddBattery.cpp" />
+    <ClCompile Include="Actions\ActionAddBulb.cpp" />
+    <ClCompile Include="Actions\ActionAddBuzzer.cpp" />
+    <ClCompile Include="Actions\ActionAddFuse.cpp" />
+    <ClCompile Include="Actions\ActionAddGround.cpp" />
+    <ClCompile Include="Actions\ActionAddSwitch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Components\Component.h">
@@ -226,6 +238,18 @@
     </ClInclude>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
     <ClInclude Include="Defs.h" />
+    <ClInclude Include="Components\Battery.h" />
+    <ClInclude Include="Components\Bulb.h" />
+    <ClInclude Include="Components\Buzzer.h" />
+    <ClInclude Include="Components\Fuse.h" />
+    <ClInclude Include="Components\Ground.h" />
+    <ClInclude Include="Components\Switch.h" />
+    <ClInclude Include="Actions\ActionAddBattery.h" />
+    <ClInclude Include="Actions\ActionAddBulb.h" />
+    <ClInclude Include="Actions\ActionAddBuzzer.h" />
+    <ClInclude Include="Actions\ActionAddFuse.h" />
+    <ClInclude Include="Actions\ActionAddGround.h" />
+    <ClInclude Include="Actions\ActionAddSwitch.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMUgraphicsLib\Manual.txt">
@@ -246,6 +270,66 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Images\Menu\Menu_Resistor.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Bulb.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Battery.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Fuse.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Ground_HI.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Battery.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Battery_HI.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Bulb.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Bulb_HI.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Buzzer.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Buzzer_HI.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Ground.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Switch_HI.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Switch.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Buzzer.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Fuse.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Ground (1).jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Switch (2).jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Comp\Fuse_HI.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Ground.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\Menu\Menu_Switch.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -1,14 +1,12 @@
 #pragma once
 #include "Component.h"
-#include "Switch.h"
-#include "UI/UI.h"
-class Switch  :
-	public Component
+
+class Switch: public Component
 {
 public:
-	Switch(GraphicsInfo* r_GfxInfo); ////for Battery to Draw itself
+	Switch(GraphicsInfo* r_GfxInfo);
 
-	virtual void Draw(UI*);	//Draws Bulb
+	virtual void Draw(UI*);
 	virtual void Operate();
 	virtual void Save();
 	virtual void Load();

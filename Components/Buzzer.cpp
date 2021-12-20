@@ -1,5 +1,4 @@
 #include "Buzzer.h"
-#include "Component.h"
 
 Buzzer::Buzzer(GraphicsInfo* r_GfxInfo):Component(r_GfxInfo)
 {

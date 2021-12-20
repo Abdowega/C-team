@@ -1,6 +1,7 @@
 #pragma once
 #include "Action.h"
-#include "..\Components\ActionAddBulb.h"
+#include "..\Components\Bulb.h"
+
 class ActionAddBulb :public Action
 {
 private:
@@ -19,7 +20,3 @@ public:
 
 
 };
-
-
-};
-

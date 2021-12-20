@@ -1,6 +1,5 @@
 #include "ActionAddBattery.h"
-#include "UI/UI.cpp"
-#include "UI/UI.h"
+#include "..\ApplicationManager.h"
 
 ActionAddBattery::ActionAddBattery(ApplicationManager* pApp) :Action(pApp)
 {

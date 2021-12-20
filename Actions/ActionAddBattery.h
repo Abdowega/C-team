@@ -1,6 +1,7 @@
 #pragma once
 #include "Action.h"
-#include "ActionAddBattery.h"
+#include "../Components/Battery.h"
+
 class ActionAddBattery :public Action
 {
 	private:

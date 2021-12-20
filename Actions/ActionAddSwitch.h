@@ -1,6 +1,7 @@
 #pragma once
 #include "Action.h"
-#include "..\Components\ActionAddSwitch.h"
+#include "..\Components\Switch.h"
+
 class ActionAddSwitch :public Action
 {
 private:

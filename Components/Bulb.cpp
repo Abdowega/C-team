@@ -1,4 +1,5 @@
 #include "Bulb.h"
+
 Bulb::Bulb(GraphicsInfo* r_GfxInfo) :Component(r_GfxInfo)
 {
 }
@@ -6,7 +7,7 @@ Bulb::Bulb(GraphicsInfo* r_GfxInfo) :Component(r_GfxInfo)
 void Bulb::Draw(UI* pUI)
 {
 	//Call output class and pass Battery drawing info to it.
-	pUI->DrawBattery(*m_pGfxInfo); //update to draw Battery.
+	pUI->DrawBulb(*m_pGfxInfo); //update to draw Battery.
 
 }
 
@@ -20,9 +21,4 @@ void Bulb::Save()
 
 void Bulb::Load()
 {
-}
-
-void Battery::Operate()
-{
-
 }

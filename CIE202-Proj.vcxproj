@@ -82,6 +82,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -110,7 +113,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Actions\ActionAddBattery.cpp" />
+    <ClCompile Include="Actions\ActionAddBulb.cpp" />
+    <ClCompile Include="Actions\ActionAddBuzzer.cpp" />
+    <ClCompile Include="Actions\ActionAddFuse.cpp" />
+    <ClCompile Include="Actions\ActionAddGround.cpp" />
     <ClCompile Include="Actions\ActionAddRes.cpp" />
+    <ClCompile Include="Actions\ActionAddSwitch.cpp" />
     <ClCompile Include="ApplicationManager.cpp" />
     <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
     <ClCompile Include="CMUgraphicsLib\CMUgraphics.cpp" />
@@ -148,16 +157,28 @@
     <ClCompile Include="CMUgraphicsLib\keyqueue.cpp" />
     <ClCompile Include="CMUgraphicsLib\mousequeue.cpp" />
     <ClCompile Include="CMUgraphicsLib\windowinput.cpp" />
+    <ClCompile Include="Components\Battery.cpp" />
+    <ClCompile Include="Components\Bulb.cpp" />
+    <ClCompile Include="Components\Buzzer.cpp" />
     <ClCompile Include="Components\Component.cpp" />
     <ClCompile Include="Components\Connection.cpp" />
+    <ClCompile Include="Components\Fuse.cpp" />
+    <ClCompile Include="Components\Ground.cpp" />
     <ClCompile Include="Components\Resistor.cpp" />
+    <ClCompile Include="Components\Switch.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Actions\Select.cpp" />
     <ClCompile Include="UI\UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actions\Action.h" />
+    <ClInclude Include="Actions\ActionAddBattery.h" />
+    <ClInclude Include="Actions\ActionAddBulb.h" />
+    <ClInclude Include="Actions\ActionAddBuzzer.h" />
+    <ClInclude Include="Actions\ActionAddFuse.h" />
+    <ClInclude Include="Actions\ActionAddGround.h" />
     <ClInclude Include="Actions\ActionAddRes.h" />
+    <ClInclude Include="Actions\ActionAddSwitch.h" />
     <ClInclude Include="ApplicationManager.h" />
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
     <ClInclude Include="CMUgraphicsLib\CMUgraphics.h" />
@@ -179,10 +200,16 @@
     <ClInclude Include="CMUgraphicsLib\mousequeue.h" />
     <ClInclude Include="CMUgraphicsLib\version.h" />
     <ClInclude Include="CMUgraphicsLib\windowinput.h" />
+    <ClInclude Include="Components\Battery.h" />
+    <ClInclude Include="Components\Bulb.h" />
+    <ClInclude Include="Components\Buzzer.h" />
     <ClInclude Include="Components\Component.h" />
     <ClInclude Include="Components\Connection.h" />
+    <ClInclude Include="Components\Fuse.h" />
+    <ClInclude Include="Components\Ground.h" />
     <ClInclude Include="Components\Resistor.h" />
     <ClInclude Include="Actions\Select.h" />
+    <ClInclude Include="Components\Switch.h" />
     <ClInclude Include="Defs.h" />
     <ClInclude Include="UI\UI.h" />
   </ItemGroup>
@@ -191,10 +218,30 @@
     <Text Include="CMUgraphicsLib\Readme.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Images\Comp\Battery.jpg" />
+    <Image Include="Images\Comp\Battery_HI.jpg" />
+    <Image Include="Images\Comp\Bulb.jpg" />
+    <Image Include="Images\Comp\Bulb_HI.jpg" />
+    <Image Include="Images\Comp\Buzzer.jpg" />
+    <Image Include="Images\Comp\Buzzer_HI.jpg" />
+    <Image Include="Images\Comp\Fuse.jpg" />
+    <Image Include="Images\Comp\Fuse_HI.jpg" />
+    <Image Include="Images\Comp\Ground.jpg" />
+    <Image Include="Images\Comp\Ground_HI.jpg" />
     <Image Include="Images\Comp\Resistor.jpg" />
     <Image Include="Images\Comp\Resistor_HI.jpg" />
+    <Image Include="Images\Comp\Switch.jpg" />
+    <Image Include="Images\Comp\Switch_HI.jpg" />
+    <Image Include="Images\Menu\Menu_Battery.jpg" />
+    <Image Include="Images\Menu\Menu_Bulb.jpg" />
+    <Image Include="Images\Menu\Menu_Buzzer.jpg" />
     <Image Include="Images\Menu\Menu_Exit.jpg" />
+    <Image Include="Images\Menu\Menu_Fuse.jpg" />
+    <Image Include="Images\Menu\Menu_Ground (1).jpg" />
+    <Image Include="Images\Menu\Menu_Ground.jpg" />
     <Image Include="Images\Menu\Menu_Resistor.jpg" />
+    <Image Include="Images\Menu\Menu_Switch (2).jpg" />
+    <Image Include="Images\Menu\Menu_Switch.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

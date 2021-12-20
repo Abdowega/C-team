@@ -1,5 +1,11 @@
 #include "ApplicationManager.h"
 #include "Actions\ActionAddRes.h"
+#include "Actions\ActionAddBattery.h"
+#include "Actions\ActionAddBulb.h"
+#include "Actions\ActionAddBuzzer.h"
+#include "Actions\ActionAddFuse.h"
+#include "Actions\ActionAddGround.h"
+#include "Actions\ActionAddSwitch.h"
 #include "Actions\Select.h"
 
 ApplicationManager::ApplicationManager()
@@ -35,12 +41,36 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			pAct= new ActionAddRes(this);
 			break;
 
+		case ADD_BATTERY:
+			pAct = new ActionAddBattery(this);
+			break;
+
+		case ADD_BULB:
+			pAct = new ActionAddBulb(this);
+			break;
+
+		case ADD_BUZZER:
+			pAct = new ActionAddBuzzer(this);
+			break;
+
+		case ADD_FUSE:
+			pAct = new ActionAddFuse(this);
+			break;
+
+		case ADD_GROUND:
+			pAct = new ActionAddGround(this);
+			break;
+
+		case ADD_SWITCH:
+			pAct = new ActionAddSwitch(this);
+			break;
+
 		case ADD_CONNECTION:
 			//TODO: Create AddConection Action here
 			break;
 
 		case SELECT:
-			pAct = new ActionSelect(this);
+			//pAct = new ActionSelect(this);
 			break;
 
 		case EXIT:

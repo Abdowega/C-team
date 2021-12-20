@@ -1,6 +1,5 @@
 #include "ActionAddBulb.h"
-#include "UI/UI.cpp"
-#include "UI/UI.h"
+#include "..\ApplicationManager.h"
 
 ActionAddBulb::ActionAddBulb(ApplicationManager* pApp) :Action(pApp)
 {

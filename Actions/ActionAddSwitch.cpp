@@ -1,7 +1,5 @@
 #include "ActionAddSwitch.h"
 #include "..\ApplicationManager.h"
-#include "UI/UI.cpp"
-#include "UI/UI.h"
 
 ActionAddSwitch::ActionAddSwitch(ApplicationManager* pApp) :Action(pApp)
 {

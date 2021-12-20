@@ -1,6 +1,7 @@
 #pragma once
 #include "Action.h"
-#include "..\Components\ActionAddBuzzer.h"
+#include "..\Components\Buzzer.h"
+
 class ActionAddBuzzer :public Action
 {
 private:

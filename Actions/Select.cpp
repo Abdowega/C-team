@@ -1,7 +1,6 @@
 #include "Select.h"
 #include "../ApplicationManager.h"
 
-
 ActionSelect::ActionSelect(ApplicationManager* pApp) :Action(pApp)
 {
 }
@@ -23,8 +22,8 @@ void ActionSelect::Execute()
 
 	int x;
 	int y;
-	pUI->getPWind()->GetMouseCoord(x ,y);
 
+	pUI->pWind->GetMouseCoord(x, y);
 	Component* ListOfComponents[200];
 
 	pManager->getCompList(ListOfComponents);

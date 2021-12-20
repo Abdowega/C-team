@@ -1,8 +1,7 @@
 #pragma once
 #include "Component.h"
-#include "UI/UI.h"
-class Fuse :
-	public Component
+
+class Fuse: public Component
 {
 public:
 	Fuse(GraphicsInfo* r_GfxInfo); ////for Battery to Draw itself

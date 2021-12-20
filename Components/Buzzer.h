@@ -1,8 +1,7 @@
 #pragma once
 #include "Component.h"
-#include "UI/UI.h"
-class Buzzer :
-	public Component
+
+class Buzzer: public Component
 {
 public:
 	Buzzer(GraphicsInfo* r_GfxInfo); ////for Battery to Draw itself

@@ -1,6 +1,7 @@
 #pragma once
 #include "Action.h"
-#include "..\Components\ActionAddGround.h"
+#include "..\Components\Ground.h"
+
 class ActionAddGround :public Action
 {
 private:

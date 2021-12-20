@@ -25,9 +25,10 @@ protected:
 	int term2_conn_count;
 
 
-	GraphicsInfo *m_pGfxInfo;	//The parameters required to draw a component
+	
 
 public:
+	GraphicsInfo* m_pGfxInfo;	//The parameters required to draw a component
 	Component(GraphicsInfo *r_GfxInfo);
 	//void setTerm1Volt(double v);		//sets the voltage at terminal1
 	//void setTerm2Volt(double v);		//sets the voltage at terminal2
