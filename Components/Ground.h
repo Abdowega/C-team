@@ -4,7 +4,7 @@
 class Ground: public Component
 {
 public:
-	Ground(GraphicsInfo* r_GfxInfo); ////for Battery to Draw itself
+	Ground(GraphicsInfo* r_GfxInfo, string txt = ""); ////for Battery to Draw itself
 
 	virtual void Draw(UI*);	//Draws Bulb
 	virtual void Operate();

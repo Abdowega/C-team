@@ -249,10 +249,10 @@ void UI::DrawResistor(const GraphicsInfo& r_GfxInfo, string labl, bool selected)
 	//Draw Resistor at Gfx_Info (1st corner)
 	pWind->DrawImage(ResImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
 
-	Printlabel("resistance", 100, 500);
+	Printlabel("resistor", 100, 300);
 }
 
-void UI::DrawBattery(const GraphicsInfo &r_GfxInfo, bool selected) const
+void UI::DrawBattery(const GraphicsInfo &r_GfxInfo,string labl, bool selected) const
 {
 	string BatImage;
 	if(selected)	
@@ -260,11 +260,17 @@ void UI::DrawBattery(const GraphicsInfo &r_GfxInfo, bool selected) const
 	else  
 		BatImage = "Images\\Comp\\Battery.jpg";	//use image of the normal
 
-	//Draw Buzzer at Gfx_Info (1st corner)
+	int y = r_GfxInfo.PointsList[0].y;
+	int x = r_GfxInfo.PointsList[0].x;
+												
+	//Draw Battery at Gfx_Info (1st corner)
 	pWind->DrawImage(BatImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+	
+	Printlabel("Battery", 200, 400);
+
 }
 
-void UI::DrawBuzzer(const GraphicsInfo& r_GfxInfo, bool selected) const
+void UI::DrawBuzzer(const GraphicsInfo& r_GfxInfo,string labl, bool selected) const
 {
 	string BuzImage;
 	if (selected)
@@ -272,11 +278,15 @@ void UI::DrawBuzzer(const GraphicsInfo& r_GfxInfo, bool selected) const
 	else
 		BuzImage = "Images\\Comp\\Buzzer.jpg";	//use image of the normal
 
+	int y = r_GfxInfo.PointsList[0].y;
+	int x = r_GfxInfo.PointsList[0].x;
+												
 	//Draw Buzzer at Gfx_Info (1st corner)
 	pWind->DrawImage(BuzImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+	Printlabel("Buzzer", 300, 500);
 }
 
-void UI::DrawBulb(const GraphicsInfo& r_GfxInfo, bool selected) const
+void UI::DrawBulb(const GraphicsInfo& r_GfxInfo, string labl, bool selected) const
 {
 	string BulImage;
 	if (selected)
@@ -284,11 +294,15 @@ void UI::DrawBulb(const GraphicsInfo& r_GfxInfo, bool selected) const
 	else
 		BulImage = "Images\\Comp\\Bulb.jpg";	//use image of the normal
 
+	int y = r_GfxInfo.PointsList[0].y;
+	int x = r_GfxInfo.PointsList[0].x;
+												
 	//Draw Buzzer at Gfx_Info (1st corner)
 	pWind->DrawImage(BulImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+	Printlabel("Bulb", 400, 600);
 }
 
-void UI::DrawFuse(const GraphicsInfo& r_GfxInfo, bool selected) const
+void UI::DrawFuse(const GraphicsInfo& r_GfxInfo, string labl,bool selected) const
 {
 	string FusImage;
 	if (selected)
@@ -296,33 +310,45 @@ void UI::DrawFuse(const GraphicsInfo& r_GfxInfo, bool selected) const
 	else
 		FusImage = "Images\\Comp\\Fuse.jpg";	//use image of the normal
 
+	int y = r_GfxInfo.PointsList[0].y;
+	int x = r_GfxInfo.PointsList[0].x;
+
 	//Draw Buzzer at Gfx_Info (1st corner)
 	pWind->DrawImage(FusImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+
+	Printlabel("Fuse", 500, 700);
 }
 
-void UI::DrawGround(const GraphicsInfo& r_GfxInfo, bool selected) const
+void UI::DrawGround(const GraphicsInfo& r_GfxInfo,string labl, bool selected) const
 {
 	string GrouImage;
 	if (selected)
 		GrouImage = "Images\\Comp\\Ground_HI.jpg";	//use image of highlighted 
 	else
 		GrouImage = "Images\\Comp\\Ground.jpg";	//use image of the normal
-
+	int y = r_GfxInfo.PointsList[0].y;
+	int x = r_GfxInfo.PointsList[0].x;
 	//Draw Buzzer at Gfx_Info (1st corner)
 	pWind->DrawImage(GrouImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+	Printlabel("Ground", 600, 800);
 }
 
-void UI::DrawSwitch(const GraphicsInfo& r_GfxInfo, bool selected) const
+
+void UI::DrawSwitch(const GraphicsInfo& r_GfxInfo,string labl, bool selected) const
 {
 	string SwitImage;
 	if (selected)
 		SwitImage = "Images\\Comp\\Switch_HI.jpg";	//use image of highlighted 
 	else
 		SwitImage = "Images\\Comp\\Switch.jpg";	//use image of the normal
+	int y = r_GfxInfo.PointsList[0].y;
+	int x = r_GfxInfo.PointsList[0].x;
 
 	//Draw Buzzer at Gfx_Info (1st corner)
 	pWind->DrawImage(SwitImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+	Printlabel("Switch", 700, 900);
 }
+
 
 //TODO: Add similar functions to draw all other components
 

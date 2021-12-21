@@ -1,13 +1,14 @@
 #include "Ground.h"
 
-Ground::Ground(GraphicsInfo* r_GfxInfo) :Component(r_GfxInfo)
+Ground::Ground(GraphicsInfo* r_GfxInfo, string txt) :Component(r_GfxInfo)
 {
+	label = txt;
 }
 
 void Ground::Draw(UI* pUI)
 {
 	//Call output class and pass Battery drawing info to it.
-	pUI->DrawGround(*m_pGfxInfo); //update to draw Battery.
+	pUI->DrawGround(*m_pGfxInfo,label); //update to draw Battery.
 
 }
 

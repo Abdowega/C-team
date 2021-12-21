@@ -111,12 +111,12 @@ public:
 		
 	// Draws a resistor
 	void DrawResistor(const GraphicsInfo& r_GfxInfo, string lbl, bool selected = false) const;
-    void DrawBattery(const GraphicsInfo &r_GfxInfo, bool selected = false) const;
-	void DrawBulb(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
-	void DrawBuzzer(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
-	void DrawFuse(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
-	void DrawGround(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
-	void DrawSwitch(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+    void DrawBattery(const GraphicsInfo &r_GfxInfo, string lbl, bool selected = false) const;
+	void DrawBulb(const GraphicsInfo& r_GfxInfo,string lbl, bool selected = false) const;
+	void DrawBuzzer(const GraphicsInfo& r_GfxInfo, string lbl, bool selected = false) const;
+	void DrawFuse(const GraphicsInfo& r_GfxInfo, string lbl, bool selected = false) const;
+	void DrawGround(const GraphicsInfo& r_GfxInfo, string lbl, bool selected = false) const;
+	void DrawSwitch(const GraphicsInfo& r_GfxInfo, string lbl, bool selected = false) const;
 	
 	///TODO: Make similar functions for drawing all other components, connections, .. etc	
 	// Draws Connection	

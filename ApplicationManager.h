@@ -36,7 +36,9 @@ public:
 	//Gets a pointer to UI Object
 	UI* GetUI();
 	
-
+	Component* GetComponentByCordinates(int x, int y);
+	// Get Coordinates of x and y 
+	
 	//Adds a new component to the list of components
 	void AddComponent(Component* pComp);
 

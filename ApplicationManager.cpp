@@ -7,6 +7,7 @@
 #include "Actions\ActionAddGround.h"
 #include "Actions\ActionAddSwitch.h"
 #include "Actions\Select.h"
+#include "Actions/ActionEditLabel.h"
 
 ApplicationManager::ApplicationManager()
 {
@@ -73,6 +74,10 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			//pAct = new ActionSelect(this);
 			break;
 
+		case EDIT_Label:
+			pAct = new ActionEditLabel(this);
+			break;
+		
 		case EXIT:
 			///TODO: create ExitAction here
 			break;
@@ -93,6 +98,13 @@ void ApplicationManager::UpdateInterface()
 
 }
 
+////////////////////////////////////////////////////////////////////
+Component* ApplicationManager::GetComponentByCordinates(int x, int y)
+{
+	for (int i = 0; i < CompCount; i++)
+		if (CompList[i]->InRegion(x, y))
+			return CompList[i];
+}
 ////////////////////////////////////////////////////////////////////
 UI* ApplicationManager::GetUI()
 {

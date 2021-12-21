@@ -29,8 +29,8 @@ void ActionAddGround::Execute()
 	pGInfo->PointsList[0].y = Cy - compHeight / 2;
 	pGInfo->PointsList[1].x = Cx + compWidth / 2;
 	pGInfo->PointsList[1].y = Cy + compHeight / 2;
-
-Ground* pR = new Ground(pGInfo);
+	string text = "TEST";
+Ground* pR = new Ground(pGInfo,text);
 	pManager->AddComponent(pR);
 }
 void ActionAddGround::Undo()

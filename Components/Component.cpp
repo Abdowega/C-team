@@ -13,6 +13,21 @@ Component::Component()
 
 }
 
+void Component::SetLabel( string mlabel) 
+{
+	m_Label = mlabel;
+}
+
+bool Component::InRegion(int x_x, int y_y) 
+{
+	if (x_x > m_pGfxInfo->PointsList[0].x && x_x < m_pGfxInfo->PointsList[1].x &&
+		y_y > m_pGfxInfo->PointsList[0].y && y_y < m_pGfxInfo->PointsList[1].y)
+	{
+		return true;
+	}
+	return false;
+}
+
 Component::~Component()
 {}
 

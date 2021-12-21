@@ -4,7 +4,7 @@
 class Switch: public Component
 {
 public:
-	Switch(GraphicsInfo* r_GfxInfo);
+	Switch(GraphicsInfo* r_GfxInfo, string txt = "");
 
 	virtual void Draw(UI*);
 	virtual void Operate();

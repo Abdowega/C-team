@@ -4,7 +4,7 @@
 class Fuse: public Component
 {
 public:
-	Fuse(GraphicsInfo* r_GfxInfo); ////for Battery to Draw itself
+	Fuse(GraphicsInfo* r_GfxInfo, string txt = ""); ////for Battery to Draw itself
 
 	virtual void Draw(UI*);	//Draws Fuse
 	virtual void Operate();

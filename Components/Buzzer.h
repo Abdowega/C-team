@@ -4,7 +4,7 @@
 class Buzzer: public Component
 {
 public:
-	Buzzer(GraphicsInfo* r_GfxInfo); ////for Battery to Draw itself
+	Buzzer(GraphicsInfo* r_GfxInfo, string txt = ""); ////for Battery to Draw itself
 
 	virtual void Draw(UI*);	//Draws Bulb
 	virtual void Operate();
