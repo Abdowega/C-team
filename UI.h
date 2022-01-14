@@ -1,10 +1,8 @@
 #ifndef __UI_H_
 #define __UI_H_
-
-#include "..\CMUgraphicsLib\CMUgraphics.h"
-#include "..\Defs.h"
-
 #include <string>
+#include "..\Defs.h"
+#include "..\CMUgraphicsLib\CMUgraphics.h"
 using namespace std;
 
 struct Point
@@ -12,12 +10,6 @@ struct Point
 	int x,y;
 };
 
-
-//A structure to contain drawing parameters for each component/connection
-//Each component stores its drawing points in this struct 
-//For example, a resistor can store points of the rectangluar area it occupies
-//The Connection can store the points of its line segments
-//this structure can be extended if desired
 struct GraphicsInfo
 {
 	int PointsCount;
@@ -25,120 +17,117 @@ struct GraphicsInfo
 	GraphicsInfo(int PtsCnt)
 	{
 		PointsCount = PtsCnt;
-		PointsList = new Point[PointsCount];	//allocate required points
+		PointsList  = new Point[PointsCount];	
 	}
 
 };
 
-
 class UI
 {
-
-	enum DsgnMenuItem //The items of the design menu (you should add more items)
+	//Icons of the design menu 
+	enum DsgnMenuItem 
 	{
-		//Note: Items are ordered here as they appear in the menu
-		//If you want to change the menu items order, just change the order here
-		ITM_RES,		//Resistor item in menu
-	
-		ITM_EXIT,		//Exit item
-		//TODO: Add more items names here
+		ITM_RES,		
 		ITM_BULB,
-		ITM_BATTERY ,
-		ITM_CONNECT,
-		ITM_SWITCH,
-		ITM_GROUND,
 		ITM_BUZZER,
 		ITM_FUSE,
-	
-		ITM_DSN_CNT		//no. of design menu items ==> This should be the last line in this enum
-	
+		ITM_SWITCH,
+		ITM_BATTERY,
+		ITM_GROUND,
+		ITM_CONNECTION,
+		ITM_EDIT,
+		ITM_LABEL,
+		ITM_DELETE,
+		ITM_SIMU,
+		ITM_EXIT,
+		ITM_DSN_CNT
+		
 	};
 
 
-	enum SimMenuItem //The items of the simulation menu (you should add more items)
+	//Simulation Menu Items;
+	enum SimMenuItem 
 	{
-		//Note: Items are ordered here as they appear in menu
-		ITM_CIRC_SIM,	//Circuit Simulate menu item
-	
-		//TODO:Add more items names here
-	
-		ITM_SIM_CNT		//no. of simulation menu items ==> This should be the last line in this enum
+		ITM_CIRC_SIM,	
+		ITM_DESIGN, 
+		ITM_EXIT2,
+
+
+		ITM_VOLTMETER,
+		ITM_AMMETER,
+
+
+		ITM_SIM_CNT		
 	
 	};
 
-
-
-	MODE AppMode;		//Application Mode (design or simulation)
 	
-	static const int	width = 1200, height = 650,	//Window width and height
-						wx = 15 , wy = 15,			//Window starting coordinates
-						StatusBarHeight = 50,	//Status Bar Height
-						ToolBarHeight = 80,		//Tool Bar Height (distance from top of window to bottom line of toolbar)
-						ToolItemWidth = 80,		//Width of each item in toolbar menu
-
-						//Arbitrary values, you can change as you wish
-						COMP_WIDTH = 100,		//Component Image width
-						COMP_HEIGHT = 20;		//Component Image height
-
-	color DrawColor;		//Drawing color
-	color SelectColor;		//Highlighting color
-	color ConnColor;		//Connector color
-	color MsgColor;			//Messages color
-	color BkGrndColor;		//Back ground color
-
-
-
-	window *pWind;
-	
-public:
-	
-	UI();
-	int getCompWidth() const;	//returns Component width
-	int getCompHeight() const;	//returns Component height
-	
-	
-	// Input Functions  ---------------------------
-	void GetPointClicked(int &, int &);	//Get coordinate where user clicks
-	string GetSrting();		//Returns a string entered by the user
-
-	ActionType GetUserAction() const; //Reads the user click and maps it to an action
-
-	
-	// Output Functions  ---------------------------
-	void ChangeTitle(string Title) const;
-
-	void CreateDesignToolBar();	//Tool bar of the design mode
-	void CreateSimulationToolBar();//Tool bar of the simulation mode
-	void CreateStatusBar() const;	//Create Status bar
-
-	void ClearStatusBar() const;		//Clears the status bar
-	void ClearDrawingArea() const;	//Clears the drawing area
+	MODE AppMode;		
+	ImageType img;
+	static const int	width = 1200, height = 650,	
+		wx = 15, wy = 15,			
+		StatusBarHeight = 50,	
+		ToolBarHeight = 80,		
+		ToolItemWidth = 80,		
 
 		
+		COMP_WIDTH = 55,		
+		COMP_HEIGHT = 55,		
+		PEN_THICKNESS = 5;
+	color SelectColor;
+	color DrawColor;			
+	color ConnColor;		
+	color BkGrndColor;
+	color MsgColor;			
+	
+
+	UI* pU;
+	window *pWind;
+	int xtemp, ytemp;
+public:
+	UI();
+	static int getToolBarHeight() ;
+	static int Height();
+	static int getWidth() ;
+	static int getStatusBarHeight();
+	static int getCompHeight();
+	static int getCompWidth();	
+	
+	
+	
+	//(((( Input Functions )))) 
+	void GetPointClicked(int &, int &);	
+	string GetSrting(string msg = "Enter any Value", string value = "1");		
+	void move(int&, int&);
+
+	ActionType GetUserAction() ; 
+	int getXtemp();
+	int getYtemp();
+	
+	// (((( Output Functions ))))  
+	void ChangeTitle(string Title) const;
+	void CreateDesignToolBar();	
+	void CreateSimulationToolBar();
+	void CreateStatusBar() const;	
+	void ClearStatusBar() const;		
+	void ClearToolBarArea()const;
+	void ClearDrawingArea() const;	
+	void SwitchImageType();
 	// Draws a resistor
 	void DrawResistor(const GraphicsInfo &r_GfxInfo, bool selected = false) const;
-
-	void DrawBULB(const GraphicsInfo& r_GfxInfo, bool selected) const;
-
-	void PrintMsg(string msg, bool selected) const;
-
-	void DrawSWITCH(const GraphicsInfo& r_GfxInfo, bool selected) const;
-
-	void DrawGROUND(const GraphicsInfo& r_GfxInfo, bool selected) const;
-
-	void DrawBUZZER(const GraphicsInfo& r_GfxInfo, bool selected) const;
-
-	void DrawFUSE(const GraphicsInfo& r_GfxInfo, bool selected) const;
-
-	///TODO: Make similar functions for drawing all other components, connections, .. etc
-
-	// Draws Connection
+	void DrawBattery(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+	void DrawGround(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+	void DrawOpenSwitch(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+	void DrawClosedSwitch(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+	void DrawFuse(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+	void DrawBulb(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+	void DrawBuzzer(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
 	void DrawConnection(const GraphicsInfo &r_GfxInfo, bool selected = false) const;
-
-	void DrawBattery(const GraphicsInfo& r_GfxInfo, bool selected) const;
 	
-	void PrintMsg(string msg) const;	//Print a message on Status bar
+	void ToSimulation();
 
+	void PrintMsg(string msg) const;
+	void labelMsg(string msg,int x=25,int y= height-StatusBarHeight + 10);
 	~UI();
 };
 
