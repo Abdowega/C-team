@@ -6,7 +6,6 @@ class ActionMove :
 	public Action
 {
 	int cx, cy;
-	int x1, y1, x2, y2;
 
 
 public:
