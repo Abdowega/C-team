@@ -1,9 +1,6 @@
-
+#include "..\ApplicationManager.h"
+#include "..\UI\UI.h"
 #include "ActionMove.h"
-#include "ApplicationManager.h"
-#include "UI/UI.cpp"
-#include "UI/UI.h" 
-#include "ActionCopy.h"
 ActionMove::ActionMove(ApplicationManager* pApp) : Action(pApp)
 {
 }

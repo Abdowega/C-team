@@ -1,21 +1,19 @@
 #pragma once
-#include"Actions/Action.h"
-#include"ApplicationManager.h"
+#include "Action.h"
 class ActionPaste :
     public Action
 {
+
 private:
-	int Cx; 
+	int Cx;
 	int Cy;
-    public:
-		ActionPaste(ApplicationManager* pApp);
-		virtual ~ActionPaste(void);
+public:
+	ActionPaste(ApplicationManager* pApp);
+	virtual ~ActionPaste(void);
 
 
-		virtual void Execute();
+	virtual void Execute();
 
-		virtual void Undo();
-		virtual void Redo();
-
+	virtual void Undo();
+	virtual void Redo();
 };
-

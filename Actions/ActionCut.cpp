@@ -1,6 +1,7 @@
 #include "ActionCut.h"
-#include "ApplicationManager.h"
-#include "UI/UI.h"
+#include "..\ApplicationManager.h"
+#include "..\UI\UI.h"
+
 
 
 ActionCut::ActionCut(ApplicationManager* pApp) :Action(pApp)
@@ -20,7 +21,7 @@ void ActionCut::Execute()
 	pUI->ClearStatusBar();
 	if (cutcomp1 != 0)
 	{
-		pManager->copy(cutcomp1);   
+		pManager->copy(cutcomp1);
 		pManager->DelComponent(cutcomp1);
 		pManager->reArrange();
 		pUI->PrintMsg("The component is cut");

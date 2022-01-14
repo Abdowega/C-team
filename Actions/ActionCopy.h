@@ -1,11 +1,10 @@
 #pragma once
-#include "Actions/Action.h"
-#include"ApplicationManager.h"
+#include "Action.h"
 class ActionCopy :
-    public Action
+	public Action
 {
 private:
-	int Cx; 
+	int Cx;
 	int Cy;
 
 
@@ -20,4 +19,3 @@ public:
 
 
 };
-
