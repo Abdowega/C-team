@@ -4,7 +4,7 @@ class ActionCut :
     public Action
 {
 
-		int C1, C2;
+		
 		int Cx;
 		int Cy;
 	public:
